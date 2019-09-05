@@ -7,7 +7,7 @@ set -o pipefail # do not ignore exit codes when piping output
 build_dir=$1
 cache_dir=$2
 env_dir=$3
-db_tools_dir=$build_dir/vendor/jq
+db_tools_dir=$build_dir/vendor/db-tools
 
 mkdir -p $db_tools_dir/bin
 
