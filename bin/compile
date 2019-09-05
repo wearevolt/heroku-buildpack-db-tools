@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -e          # fail fast
+set -o pipefail # do not ignore exit codes when piping output
+#set -x          # enable debugging
+
+build_dir=$1
+cache_dir=$2
+env_dir=$3
+db_tools_dir=$build_dir/vendor/jq
+
+mkdir -p $db_tools_dir/bin
+
+# Download db-tools
+git clone git@github.com:wearevolt/db-tools.git $db_tools_dir
+
+mkdir -p $build_dir/.profile.d
+echo 'PATH=$PATH:$HOME/vendor/jq/bin' > $build_dir/.profile.d/db-tools.sh

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+echo "db-tools"
+exit 0
