@@ -15,4 +15,4 @@ mkdir -p $db_tools_dir/bin
 git clone https://github.com/wearevolt/db-tools.git $db_tools_dir/bin
 
 mkdir -p $build_dir/.profile.d
-echo 'PATH=$PATH:db_tools_dir/bin' > $build_dir/.profile.d/db-tools.sh
+echo 'PATH=$PATH:$db_tools_dir/bin' > $build_dir/.profile.d/db-tools.sh
